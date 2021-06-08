@@ -1,7 +1,16 @@
 import React from "react";
-import "./app.css"
+import "./app.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Homepage from "./pages/Homepage";
+import Navbar from "./components/navbar";
+
 const App = () => {
-  return <h1 style={{ color: "black" }}>React development has begun!</h1>;
+  return (
+    <>
+      <Navbar />
+      <Homepage />
+    </>
+  );
 };
 
 export default App;
