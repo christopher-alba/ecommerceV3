@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { InputGroup } from "react-bootstrap";
 import Container from "../JCUX/Container";
 import "./navbar.css";
 
@@ -22,9 +21,15 @@ const NavbarMain = () => {
   return (
     <div className="jcux-navbar-main-outer">
       <Container className="jcux-navbar-container">
-        <h1 className="jcux-navbar-brand jcux-navbar-item">eCommerce V3</h1>
-        <h2 className="jcux-navbar-link jcux-navbar-item">Home</h2>
-        <h2 className="jcux-navbar-link jcux-navbar-item">Shop</h2>
+        <a className="jcux-navbar-link-wrapper jcux-navbar-item" href="">
+          <h1 className="jcux-navbar-brand">eCommerce V3</h1>
+        </a>
+        <a className="jcux-navbar-link-wrapper jcux-navbar-item" href="">
+          <h2 className="jcux-navbar-link">Home</h2>
+        </a>
+        <a className="jcux-navbar-link-wrapper jcux-navbar-item" href="">
+          <h2 className="jcux-navbar-link">Shop</h2>
+        </a>
         <form className="jcux-navbar-searchbar jcux-navbar-item" action="/">
           <input
             className="jcux-navbar-input"
@@ -35,6 +40,11 @@ const NavbarMain = () => {
             <i className="fas fa-search"></i>
           </button>
         </form>
+        <button className="jcux-navbar-button jcux-navbar-item">
+          <i className="fas fa-shopping-cart"></i> $0.00
+        </button>
+        <button className="jcux-navbar-button jcux-navbar-item">sign in</button>
+        <button className="jcux-navbar-button jcux-navbar-item">sign up</button>
       </Container>
     </div>
   );

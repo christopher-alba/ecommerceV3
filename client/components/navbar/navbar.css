@@ -26,6 +26,13 @@
   font-size: 1.5rem;
   margin-bottom: 0px;
   color: var(--jcux-secondary);
+  transition: 500ms;
+}
+.jcux-navbar-link:hover {
+  color: var(--jcux-tertiary);
+}
+.jcux-navbar-link-wrapper:hover {
+  text-decoration: none;
 }
 .jcux-navbar-searchbar {
   width: 100%;
@@ -36,22 +43,19 @@
 .jcux-navbar-input {
   width: 80%;
   background: transparent;
-  border: 2px solid white;
+  border: 2px solid var(--jcux-secondary);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   color: var(--jcux-secondary);
   overflow-y: visible !important;
 }
 .jcux-navbar-input::placeholder {
-  color: white;
+  color: var(--jcux-secondary);
   text-align: center;
   transition: 500ms;
 }
 
 .jcux-navbar-input:focus {
-  border: 2px solid white;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
   outline: none;
 }
 .jcux-navbar-submit {
@@ -63,6 +67,25 @@
   transition: 500ms;
 }
 .jcux-navbar-submit:hover {
-  background: black;
-  color: white;
+  background: var(--jcux-tertiary);
+  color: var(--jcux-secondary);
+}
+.jcux-navbar-button {
+  white-space: nowrap;
+  background: transparent;
+  border-radius: 5px;
+  border: 2px solid var(--jcux-secondary);
+  padding-left: 20px;
+  padding-right: 20px;
+  color: var(--jcux-secondary);
+  transition: 500ms;
+}
+.jcux-navbar-button:hover {
+  background: var(--jcux-tertiary);
+}
+button.jcux-navbar-item {
+  margin-right: 10px !important;
+}
+button.jcux-navbar-item:last-of-type {
+  margin-right: 0px !important;
 }
