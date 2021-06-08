@@ -1,7 +1,14 @@
 import React from "react";
-
-const Navbar = () => {
-  return <div>Navbar</div>;
+import Container from "../JCUX/Container";
+import "./navbar.css";
+const NavbarMain = () => {
+  return (
+    <div className="navbar-main-outer">
+      <Container>
+        <h1>eCommerce V3</h1>
+      </Container>
+    </div>
+  );
 };
 
-export default Navbar;
+export default NavbarMain;
