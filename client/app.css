@@ -1,3 +1,4 @@
-body{
-    background:lightblue;
-}
+:root {
+    --jcux-primary: #E28F8F;
+    --jcux-secondary: #ffffff;
+  }
