@@ -1,0 +1,21 @@
+.homepage-hero {
+  background: var(--jcux-primary);
+  height: 60vh;
+}
+
+.homepage-hero-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.homepage-hero-title {
+  color: var(--jcux-secondary);
+  font-size: 5rem;
+}
+
+.homepage-hero-buttons {
+  min-width: 300px;
+  max-width: 50%;
+}
