@@ -29,7 +29,7 @@
   white-space: nowrap;
 }
 
-@media (max-width: 450px){
+@media (max-width: 450px) {
   .jcux-navbar-brand {
     font-size: 1rem;
   }
@@ -93,7 +93,7 @@
   color: var(--jcux-secondary);
   transition: 500ms;
 }
-@media (max-width: 450px){
+@media (max-width: 450px) {
   .jcux-navbar-button {
     padding-left: 10px;
     padding-right: 10px;
@@ -109,15 +109,19 @@ button.jcux-navbar-item:last-of-type {
   margin-right: 0px !important;
 }
 
-.jcux-navbar-searchbar-mobile-container{
-  margin-top:10px;
+.jcux-navbar-searchbar-mobile-container {
+  margin-top: 10px;
 }
 
-.jcux-navbar-container-mobile-menu{
-  display:flex;
+.jcux-navbar-container-mobile-menu {
+  display: flex;
   flex-direction: column;
 }
 
-.jcux-navbar-container-mobile-menu .jcux-navbar-item{
-  margin-top:10px;
+.jcux-navbar-container-mobile-menu .jcux-navbar-item {
+  margin-top: 10px;
+}
+.jcux-navbar-bars {
+  transition: 200ms linear;
+  opacity: 1;
 }

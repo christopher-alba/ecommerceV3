@@ -19,6 +19,14 @@ const onSearchbarLoseFocus = () => {
 
 const toggleMenu = (toggle, value) => {
   toggle(!value);
+  let menu = document.getElementsByClassName("jcux-navbar-bars")[0];
+  if (menu.classList.contains("fa-bars")) {
+    menu.classList.remove("fa-bars");
+    menu.classList.add("fa-chevron-up");
+  } else {
+    menu.classList.add("fa-bars");
+    menu.classList.remove("fa-chevron-up");
+  }
 };
 const NavbarMain = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -84,7 +92,7 @@ const NavbarNarrow = () => {
             onClick={() => toggleMenu(setVisible, visible)}
             className="jcux-navbar-button jcux-navbar-item"
           >
-            <i className="fas fa-bars"></i>
+            <i className="fas fa-bars jcux-navbar-bars"></i>
           </button>
         </div>
       </Container>
