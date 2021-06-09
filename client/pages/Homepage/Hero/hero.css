@@ -1,5 +1,5 @@
 .homepage-hero {
-  background: url("./img.jpg");
+  background: var(--jcux-primary);
   height: 60vh;
 }
 
