@@ -1,0 +1,46 @@
+.top-picks{
+  margin-top:10%;
+  margin-bottom:10%;
+}
+
+.top-picks-main-wrapper{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  overflow-x:scroll;
+  cursor:grab;
+  user-select: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.top-picks-main-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.top-picks-main-wrapper {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.top-pick-main-wrapper {
+  margin-right:20px;
+  border:2px solid var(--jcux-primary);
+  background: var(--jcux-primary);
+  border-radius: 20px;
+  width:200px;
+  color: white;
+}
+.top-pick-image-wrapper{
+  overflow:hidden;
+  height:200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.top-pick-image-wrapper img{
+  height:200px;
+  width:auto;
+}
+.top-pick-main-wrapper:last-of-type{
+  margin-right:0px;
+}
