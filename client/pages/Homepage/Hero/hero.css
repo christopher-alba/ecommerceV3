@@ -14,12 +14,35 @@
   color: var(--jcux-secondary);
   font-size: 5rem;
 }
+
+.homepage-hero-buttons {
+  min-width: 250px;
+  max-width: 50%;
+  background:transparent;
+  border:2px solid var(--jcux-secondary);
+  border-radius:20px;
+  color:var(--jcux-secondary);
+  margin-top:20px;
+  padding:10px;
+  font-size:1.5rem;
+  transition:500ms;
+}
+
+.homepage-hero-buttons:hover{
+  background: var(--jcux-secondary);
+  color: var(--jcux-tertiary);
+}
+
 @media (max-width:450px){
   .homepage-hero-title {
     font-size: 2.5rem;
   }
-}
-.homepage-hero-buttons {
-  min-width: 300px;
-  max-width: 50%;
+  .homepage-hero-container{
+    align-items: center;
+  }
+  .homepage-hero-buttons{
+    font-size:1rem;
+    padding:5px;
+    margin-top:10px;
+  }
 }
