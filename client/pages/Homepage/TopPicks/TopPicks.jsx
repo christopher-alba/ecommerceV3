@@ -124,7 +124,11 @@ const TopPicks = () => {
   return (
     <div className="top-picks">
       <Container>
-        <h1>Most viewed products</h1>
+        <div className="top-pick-title-wrapper">
+          <h1 className="top-pick-title">Most viewed products</h1>
+          <div className="top-pick-title-decor" />
+        </div>
+
         <div className="top-picks-main-wrapper">
           {sortedArray.map((product, index) => {
             return (
