@@ -86,7 +86,7 @@ const data = [
 ]
 
 const TopPicks = () => {
-  let sortedArray = [...data];
+  let sortedArray = [...data]
   useEffect(() => {
     // makes top picks drag to scroll
     const slider = document.querySelector('.top-picks-main-wrapper')
@@ -128,13 +128,15 @@ const TopPicks = () => {
         <div className="top-picks-main-wrapper">
           {sortedArray.map((product, index) => {
             return (
-              <div className="top-pick-main-wrapper" key={index}>
+              <a href="/" key={index} className="top-pick-main-wrapper">
                 <div className="top-pick-image-wrapper">
                   <img src={product.images[0]} alt="" />
                 </div>
-                <h1>{product.name}</h1>
-                <h1>NZD${product.price}</h1>
-              </div>
+                <div className="top-pick-text-wrapper">
+                  <h1 className="top-pick-name">{product.name}</h1>
+                  <h1 className="top-pick-price">NZD${product.price}</h1>
+                </div>
+              </a>
             )
           })}
         </div>

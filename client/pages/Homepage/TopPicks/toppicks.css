@@ -29,7 +29,8 @@
   background: var(--jcux-primary);
   border-radius: 20px;
   width:200px;
-  color: white;
+  color: var(--jcux-secondary);
+  transition:200ms;
 }
 .top-pick-image-wrapper{
   overflow:hidden;
@@ -37,10 +38,22 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+a.top-pick-main-wrapper:hover{
+  text-decoration: none;
+  color:var(--jcux-secondary);
+  background: var(--jcux-tertiary);
+  border-color:var(--jcux-tertiary);
+}
 .top-pick-image-wrapper img{
   height:200px;
   width:auto;
 }
 .top-pick-main-wrapper:last-of-type{
   margin-right:0px;
+}
+.top-pick-name, .top-pick-price{
+  font-size:1.5rem;
+}
+.top-pick-text-wrapper{
+  padding:10px;
 }
