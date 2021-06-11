@@ -121,6 +121,15 @@ const TopPicks = () => {
   sortedArray.sort((a, b) => {
     return b.views - a.views
   })
+
+  const onLeftArrowClick = () => {
+    const topPicks = document.getElementsByClassName('top-picks-main-wrapper')[0]
+    topPicks.scrollLeft = topPicks.scrollLeft - 500
+  }
+  const onRightArrowClick = () => {
+    const topPicks = document.getElementsByClassName('top-picks-main-wrapper')[0]
+    topPicks.scrollLeft = topPicks.scrollLeft + 500
+  }
   return (
     <div className="top-picks">
       <Container>
@@ -128,21 +137,28 @@ const TopPicks = () => {
           <h1 className="top-pick-title">Most viewed products</h1>
           <div className="top-pick-title-decor" />
         </div>
-
-        <div className="top-picks-main-wrapper">
-          {sortedArray.map((product, index) => {
-            return (
-              <a href="/" key={index} className="top-pick-main-wrapper">
-                <div className="top-pick-image-wrapper">
-                  <img src={product.images[0]} alt="" />
-                </div>
-                <div className="top-pick-text-wrapper">
-                  <h1 className="top-pick-name">{product.name}</h1>
-                  <h1 className="top-pick-price">NZD${product.price}</h1>
-                </div>
-              </a>
-            )
-          })}
+        <div className="top-picks-outer-wrapper">
+          <div className="top-picks-outer-arrow" onClick={onLeftArrowClick}>
+            {'<'}
+          </div>
+          <div className="top-picks-main-wrapper">
+            {sortedArray.map((product, index) => {
+              return (
+                <a href="/" key={index} className="top-pick-main-wrapper">
+                  <div className="top-pick-image-wrapper">
+                    <img src={product.images[0]} alt="" />
+                  </div>
+                  <div className="top-pick-text-wrapper">
+                    <h1 className="top-pick-name">{product.name}</h1>
+                    <h1 className="top-pick-price">NZD${product.price}</h1>
+                  </div>
+                </a>
+              )
+            })}
+          </div>
+          <div className="top-picks-outer-arrow" onClick={onRightArrowClick}>
+            {'>'}
+          </div>
         </div>
 
       </Container>
