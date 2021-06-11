@@ -15,11 +15,13 @@
   overflow: hidden;
   position: relative;
 }
-
+.category-button:hover {
+}
 .category-image {
   position: absolute;
-  width: 100%;
-  height: auto;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
   top: 0px;
 }
 .category-text {
@@ -31,8 +33,8 @@
   position: absolute;
   top: 0px;
   height: 100%;
-  width:100%;
-  background:rgba(255, 255, 255, 0.892);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.892);
 }
 
 @media (max-width: 1014px) {
