@@ -1,0 +1,18 @@
+.title-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 50px;
+}
+.title {
+  white-space: nowrap;
+  color: var(--jcux-primary);
+  margin-right: 30px;
+}
+.title-decor {
+  background: var(--jcux-primary);
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+}

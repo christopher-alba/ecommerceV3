@@ -1,4 +1,5 @@
 import React from "react";
+import Categories from "./Categories";
 import Hero from "./Hero";
 import "./homepage.css";
 import TopPicks from "./TopPicks";
@@ -7,6 +8,7 @@ const Homepage = () => {
     <>
       <Hero />
       <TopPicks />
+      <Categories />
     </>
   );
 };

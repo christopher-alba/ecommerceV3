@@ -1,145 +1,147 @@
-import React, { useEffect } from 'react'
-import Container from '../../../components/JCUX/Container'
-import './toppicks.css'
+import React, { useEffect } from "react";
+import Container from "../../../components/JCUX/Container";
+import Title from "../../../components/JCUX/Title";
+import "./toppicks.css";
 
 const data = [
   {
-    name: 'product 1',
+    name: "product 1",
     price: 76.99,
-    images: [
-      'https://images.hdqwalls.com/wallpapers/fashion-model-hd.jpg'
-    ],
-    views: 1
+    images: ["https://images.hdqwalls.com/wallpapers/fashion-model-hd.jpg"],
+    views: 1,
   },
   {
-    name: 'product 2',
+    name: "product 2",
     price: 76.99,
     images: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU'
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU",
     ],
-    views: 2
+    views: 2,
   },
   {
-    name: 'product 3',
+    name: "product 3",
     price: 76.99,
     images: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU'
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU",
     ],
-    views: 3
+    views: 3,
   },
   {
-    name: 'product 4',
+    name: "product 4",
     price: 76.99,
     images: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU'
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU",
     ],
-    views: 4
+    views: 4,
   },
   {
-    name: 'product 5',
+    name: "product 5",
     price: 76.99,
     images: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU'
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU",
     ],
-    views: 5
+    views: 5,
   },
   {
-    name: 'product 6',
+    name: "product 6",
     price: 76.99,
     images: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU'
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU",
     ],
-    views: 6
+    views: 6,
   },
   {
-    name: 'product 7',
+    name: "product 7",
     price: 76.99,
     images: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU'
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU",
     ],
-    views: 7
+    views: 7,
   },
   {
-    name: 'product 8',
+    name: "product 8",
     price: 76.99,
     images: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU'
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU",
     ],
-    views: 8
+    views: 8,
   },
   {
-    name: 'product 9',
+    name: "product 9",
     price: 76.99,
     images: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU'
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU",
     ],
-    views: 9
+    views: 9,
   },
   {
-    name: 'product 10',
+    name: "product 10",
     price: 76.99,
     images: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU'
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxdxouuxJ7nEpWa24dcw08rE7JzfDvxBWbg&usqp=CAU",
     ],
-    views: 10
-  }
-]
+    views: 10,
+  },
+];
 
 const TopPicks = () => {
-  let sortedArray = [...data]
+  let sortedArray = [...data];
   useEffect(() => {
     // makes top picks drag to scroll
-    const slider = document.querySelector('.top-picks-main-wrapper')
-    let mouseDown = false
-    let startX, scrollLeft
+    const slider = document.querySelector(".top-picks-main-wrapper");
+    let mouseDown = false;
+    let startX, scrollLeft;
 
     let startDragging = function (e) {
-      mouseDown = true
-      slider.style.cursor = 'grabbing'
-      startX = e.pageX - slider.offsetLeft
-      scrollLeft = slider.scrollLeft
-    }
+      mouseDown = true;
+      slider.style.cursor = "grabbing";
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    };
     let stopDragging = function (event) {
-      mouseDown = false
-      slider.style.cursor = 'grab'
-    }
+      mouseDown = false;
+      slider.style.cursor = "grab";
+    };
 
-    slider.addEventListener('mousemove', (e) => {
-      e.preventDefault()
-      if (!mouseDown) { return }
-      const x = e.pageX - slider.offsetLeft
-      const scroll = x - startX
-      slider.scrollLeft = scrollLeft - scroll
-    })
+    slider.addEventListener("mousemove", (e) => {
+      e.preventDefault();
+      if (!mouseDown) {
+        return;
+      }
+      const x = e.pageX - slider.offsetLeft;
+      const scroll = x - startX;
+      slider.scrollLeft = scrollLeft - scroll;
+    });
 
     // Add the event listeners
-    slider.addEventListener('mousedown', startDragging, false)
-    slider.addEventListener('mouseup', stopDragging, false)
-    slider.addEventListener('mouseleave', stopDragging, false)
-  })
+    slider.addEventListener("mousedown", startDragging, false);
+    slider.addEventListener("mouseup", stopDragging, false);
+    slider.addEventListener("mouseleave", stopDragging, false);
+  });
   // order data based on most viewed
   sortedArray.sort((a, b) => {
-    return b.views - a.views
-  })
+    return b.views - a.views;
+  });
 
   const onLeftArrowClick = () => {
-    const topPicks = document.getElementsByClassName('top-picks-main-wrapper')[0]
-    topPicks.scrollLeft = topPicks.scrollLeft - 500
-  }
+    const topPicks = document.getElementsByClassName(
+      "top-picks-main-wrapper"
+    )[0];
+    topPicks.scrollLeft = topPicks.scrollLeft - 500;
+  };
   const onRightArrowClick = () => {
-    const topPicks = document.getElementsByClassName('top-picks-main-wrapper')[0]
-    topPicks.scrollLeft = topPicks.scrollLeft + 500
-  }
+    const topPicks = document.getElementsByClassName(
+      "top-picks-main-wrapper"
+    )[0];
+    topPicks.scrollLeft = topPicks.scrollLeft + 500;
+  };
   return (
     <div className="top-picks">
       <Container>
-        <div className="top-pick-title-wrapper">
-          <h1 className="top-pick-title">Most viewed products</h1>
-          <div className="top-pick-title-decor" />
-        </div>
+        <Title text="Most Viewed Products"/>
         <div className="top-picks-outer-wrapper">
           <div className="top-picks-outer-arrow" onClick={onLeftArrowClick}>
-            {'<'}
+            <i className="fas fa-chevron-left"></i>
           </div>
           <div className="top-picks-main-wrapper">
             {sortedArray.map((product, index) => {
@@ -153,17 +155,16 @@ const TopPicks = () => {
                     <h1 className="top-pick-price">NZD${product.price}</h1>
                   </div>
                 </a>
-              )
+              );
             })}
           </div>
           <div className="top-picks-outer-arrow" onClick={onRightArrowClick}>
-            {'>'}
+            <i className="fas fa-chevron-right"></i>
           </div>
         </div>
-
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default TopPicks
+export default TopPicks;

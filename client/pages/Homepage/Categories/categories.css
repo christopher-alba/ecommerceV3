@@ -1,0 +1,17 @@
+.categories {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+@media (max-width: 800px) {
+  .title-decor {
+    display: none;
+  }
+  .title {
+    white-space: normal;
+    font-size: 2rem;
+  }
+  .title-wrapper {
+    height: fit-content;
+  }
+}
