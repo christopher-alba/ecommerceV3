@@ -32,7 +32,6 @@
   align-items: center;
   justify-content: center;
   padding:10px;
-  margin:5px;
   transition:300ms;
   font-weight:bolder;
   min-height:100%;
@@ -40,6 +39,12 @@
   cursor:pointer;
   border-radius:100px;
   background:var(--jcux-primary);
+}
+.top-picks-outer-arrow:first-of-type{
+  margin-right:20px;
+}
+.top-picks-outer-arrow:last-of-type{
+  margin-left:20px;
 }
 .top-picks-outer-arrow:hover{
   background:var(--jcux-tertiary);
