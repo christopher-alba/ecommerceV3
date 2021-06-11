@@ -16,3 +16,15 @@
   width: 100%;
   border-radius: 100px;
 }
+@media (max-width: 800px) {
+  .title-decor {
+    display: none;
+  }
+  .title {
+    white-space: normal;
+    font-size: 2rem;
+  }
+  .title-wrapper {
+    height: fit-content;
+  }
+}

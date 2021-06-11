@@ -1,0 +1,33 @@
+.category-button {
+  width: 48%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--jcux-primary);
+  color: var(--jcux-primary);
+  border-radius: 30px;
+  border: 2px solid var(--jcux-primary);
+  margin-top: 50px;
+  transition: 500ms;
+  font-size: 2rem;
+  font-weight: bolder;
+  overflow: hidden;
+  position: relative;
+}
+
+.category-image {
+  position: absolute;
+  top: 0px;
+}
+.category-text {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1014px) {
+  .category-button {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}

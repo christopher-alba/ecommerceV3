@@ -3,15 +3,8 @@
   margin-bottom: 10%;
 }
 
-@media (max-width: 800px) {
-  .title-decor {
-    display: none;
-  }
-  .title {
-    white-space: normal;
-    font-size: 2rem;
-  }
-  .title-wrapper {
-    height: fit-content;
-  }
+.categories-main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
