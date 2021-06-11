@@ -15,8 +15,7 @@
   overflow: hidden;
   position: relative;
 }
-.category-button:hover {
-}
+
 .category-image {
   position: absolute;
   flex-shrink: 0;
@@ -35,6 +34,12 @@
   height: 100%;
   width: 100%;
   background: rgba(255, 255, 255, 0.892);
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.category-image-filter:hover {
+  background: var(--jcux-secondary);
 }
 
 @media (max-width: 1014px) {
