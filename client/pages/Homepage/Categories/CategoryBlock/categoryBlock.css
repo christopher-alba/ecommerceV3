@@ -18,12 +18,23 @@
 
 .category-image {
   position: absolute;
+  height: 100%;
+  width: auto;
   top: 0px;
 }
 .category-text {
   position: relative;
   z-index: 1;
 }
+
+.category-image-filter {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width:100%;
+  background:rgba(255, 255, 255, 0.809);
+}
+
 @media (max-width: 1014px) {
   .category-button {
     width: 100%;
