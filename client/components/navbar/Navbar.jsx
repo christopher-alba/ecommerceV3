@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Container from "../JCUX/Container";
 import "./navbar.css";
 import { Collapse } from "react-bootstrap";
+import useWindowWidth from "../../hooks/useWindowWidth";
 
 const onSearchbarFocus = () => {
   let form = document.getElementsByClassName("jcux-navbar-searchbar")[0];
@@ -29,11 +30,8 @@ const toggleMenu = (toggle, value) => {
   }
 };
 const NavbarMain = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const windowWidth = useWindowWidth();
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWindowWidth(window.innerWidth);
-    });
     let input = document.getElementsByClassName("jcux-navbar-input")[0];
     if (input) {
       input.addEventListener("focusin", onSearchbarFocus);
