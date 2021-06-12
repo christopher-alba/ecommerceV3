@@ -35,7 +35,7 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     contentBase: "./server/public",
-    historyApiFallback: true,
+    historyApiFallback: { index: '/server/public/' } ,
     publicPath: "/",
   },
 };
