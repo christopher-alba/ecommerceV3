@@ -3,6 +3,7 @@ import Container from "../JCUX/Container";
 import "./navbar.css";
 import { Collapse } from "react-bootstrap";
 import useWindowWidth from "../../hooks/useWindowWidth";
+import { Link } from "react-router-dom";
 
 const onSearchbarFocus = () => {
   let form = document.getElementsByClassName("jcux-navbar-searchbar")[0];
@@ -45,15 +46,15 @@ const NavbarWide = () => {
   return (
     <div className="jcux-navbar-main-outer">
       <Container className="jcux-navbar-container">
-        <a className="jcux-navbar-link-wrapper jcux-navbar-item" href="">
+        <Link className="jcux-navbar-link-wrapper jcux-navbar-item" to="/">
           <h1 className="jcux-navbar-brand">eCommerce V3</h1>
-        </a>
-        <a className="jcux-navbar-link-wrapper jcux-navbar-item" href="">
+        </Link>
+        <Link className="jcux-navbar-link-wrapper jcux-navbar-item" to="/">
           <h2 className="jcux-navbar-link">Home</h2>
-        </a>
-        <a className="jcux-navbar-link-wrapper jcux-navbar-item" href="">
+        </Link>
+        <Link className="jcux-navbar-link-wrapper jcux-navbar-item" to="/">
           <h2 className="jcux-navbar-link">Shop</h2>
-        </a>
+        </Link>
         <form className="jcux-navbar-searchbar jcux-navbar-item" action="/">
           <input
             className="jcux-navbar-input"
@@ -79,9 +80,9 @@ const NavbarNarrow = () => {
   return (
     <div className="jcux-navbar-main-outer">
       <Container className="jcux-navbar-container-mobile">
-        <a className="jcux-navbar-link-wrapper jcux-navbar-item-mobile" href="">
+        <Link className="jcux-navbar-link-wrapper jcux-navbar-item-mobile" to="/">
           <h1 className="jcux-navbar-brand">eCommerce V3</h1>
-        </a>
+        </Link>
         <div>
           <button className="jcux-navbar-button jcux-navbar-item">
             <i className="fas fa-shopping-cart"></i> $0.00
@@ -96,12 +97,12 @@ const NavbarNarrow = () => {
       </Container>
       <Collapse in={visible}>
         <Container className="jcux-navbar-container-mobile-menu">
-          <a className="jcux-navbar-link-wrapper jcux-navbar-item" href="">
+          <Link className="jcux-navbar-link-wrapper jcux-navbar-item" to="/">
             <h2 className="jcux-navbar-link">Home</h2>
-          </a>
-          <a className="jcux-navbar-link-wrapper jcux-navbar-item" href="">
+          </Link>
+          <Link className="jcux-navbar-link-wrapper jcux-navbar-item" to="/">
             <h2 className="jcux-navbar-link">Shop</h2>
-          </a>
+          </Link>
           <div>
             <button className="jcux-navbar-button jcux-navbar-item">
               sign in

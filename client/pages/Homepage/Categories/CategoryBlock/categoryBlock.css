@@ -15,7 +15,10 @@
   overflow: hidden;
   position: relative;
 }
-
+.category-button:hover {
+  color: var(--jcux-primary);
+  text-decoration: none;
+}
 .category-image {
   position: absolute;
   flex-shrink: 0;
